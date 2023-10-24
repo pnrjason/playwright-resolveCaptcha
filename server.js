@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.post('/runscript', async (req, res) => {
   try {
-    const result = await require('./pureflix.js');
+    const result = await require('./resolveCaptcha.js');
     res.send(result);
   } catch (error) {
     res.status(500).send(`Error executing script: ${error.message}`);
