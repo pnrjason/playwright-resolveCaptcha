@@ -18,7 +18,7 @@ const { chromium, devices } = require('playwright');
   await page.click('#plans-page > div.page-action > span > button');
 
   await page.waitForSelector('body > div:nth-child(46) > div');
-  const password = 'Hanasakura1@';
+  const password = '6pR12o2H4Bd@';
   await page.type('#account_password', password);
   await page.click('#button-signup');
 
