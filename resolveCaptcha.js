@@ -21,7 +21,7 @@ const { chromium, devices } = require('playwright');
   const password = '6pR12o2H4Bd@';
   await page.type('#account_password', password);
   await page.click('#button-signup');
-
+  
   page.on('response', async (response) => {
     const url = response.url();
     if (url.includes('https://www.google.com/recaptcha/api2/reload')) {
