@@ -8,11 +8,7 @@ app.use(bodyParser.json());
 
 app.post('/runscript', async (req, res) => {
   try {
-    const cardData = req.body.card;  // This extracts the "card" data from the POST request
-    if (!cardData) {
-      return res.status(400).send("Card data is missing.");
-    }
-    const result = await require('./fluidpay.js')(cardData);
+    const result = await require('./pureflix.js');
     res.send(result);
   } catch (error) {
     res.status(500).send(`Error executing script: ${error.message}`);
